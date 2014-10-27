@@ -6,6 +6,6 @@ if __name__ == '__main__':
     #ex = Existence01()
     ex = Existence02()
 
-    for i in range(0, 7):
+    for i in range(0, 20):
         stepTrace = ex.step()
         print "%d: %s" % (i, stepTrace)
