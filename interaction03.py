@@ -35,4 +35,4 @@ class Interaction03(Interaction01):
         return self.preInteraction==None
     
     def __repr__(self):
-        return self.getLabel() + ',' + self.getValence()
+        return "{0}, {1}".format(self.getLabel(),self.getValence())
