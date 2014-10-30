@@ -17,14 +17,13 @@ class Existence02(Existence01):
         self.addOrGetPrimitiveInteraction(e2, r1, -1)
         self.addOrGetPrimitiveInteraction(e2, r2, 1)
         self.previousExperience = e1
-        BOREDOME_LEVEL = 3#changes
-        selfSatisfactionCounter = 0#changes
-
+ 
     def step(self):
         experience = self.previousExperience
-        if self.mood == 'PAINED' or  self.mood == 'BORED':
+        if self.mood == 'PAINED' :
             experience = self.getOtherExperience(experience)
-            self.selfSatisfactionCounter = 0#changes
+
+
 
         result = self.returnResult010(experience)
 
@@ -32,12 +31,8 @@ class Existence02(Existence01):
 
         if enactedInteraction.getValence() > 0:
             self.mood = 'PLEASED'
-            self.selfSatisfactionCounter += 1#changes
         else:
             self.mood = 'PAINED'
-            
-        if self.selfSatisfactionCounter >= self.BOREDOME_LEVEL: #changes
-            self.mood = 'BORED'#changes
 
         self.previousExperience = experience
 
