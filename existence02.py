@@ -17,11 +17,13 @@ class Existence02(Existence01):
         self.addOrGetPrimitiveInteraction(e2, r1, -1)
         self.addOrGetPrimitiveInteraction(e2, r2, 1)
         self.previousExperience = e1
-
+ 
     def step(self):
         experience = self.previousExperience
-        if self.mood == 'PAINED':
+        if self.mood == 'PAINED' :
             experience = self.getOtherExperience(experience)
+
+
 
         result = self.returnResult010(experience)
 

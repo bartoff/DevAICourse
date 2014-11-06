@@ -10,4 +10,4 @@ if __name__ == '__main__':
 
     for i in range(0, 7):
         stepTrace = ex.step()
-        print "%d: %s" % (i, stepTrace)
+        print (i, stepTrace)#wasn't working
